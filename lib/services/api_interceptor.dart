@@ -31,7 +31,7 @@ class ApiInterceptor implements InterceptorContract {
 
 class ExpiredTokenRetryPolicy extends RetryPolicy {
   @override
-  int maxRetryAttempts = 1;
+  int get maxRetryAttempts => 1;
 
   @override
   Future<bool> shouldAttemptRetryOnResponse(ResponseData response) async {
